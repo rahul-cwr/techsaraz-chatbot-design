@@ -8,7 +8,7 @@ function changeAtiveTab(event,tabID){
     tabContents = document.getElementById("tabs-id").querySelectorAll(".tab-content > div");
     for(let i = 0 ; i < aElements.length; i++){
       aElements[i].classList.remove("text-white");
-      aElements[i].classList.remove("bg-gray-700");
+      aElements[i].classList.remove("bg-purple-950");
       aElements[i].classList.add("text-gray-700");
       aElements[i].classList.add("bg-white");
       tabContents[i].classList.add("hidden");
@@ -17,7 +17,7 @@ function changeAtiveTab(event,tabID){
     element.classList.remove("text-gray-700");
     element.classList.remove("bg-white");
     element.classList.add("text-white");
-    element.classList.add("bg-gray-700");
+    element.classList.add("bg-purple-950");
     document.getElementById(tabID).classList.remove("hidden");
     document.getElementById(tabID).classList.add("block");
   }
