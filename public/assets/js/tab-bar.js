@@ -1,16 +1,23 @@
-
-  const tabButtons = document.querySelectorAll(".tab-btn");
-  const tabContents = document.querySelectorAll(".tab-content");
-
-  tabButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      // Reset all tabs
-      tabButtons.forEach(b => b.classList.remove("bg-gray-800", "text-gray-50", "rounded-full"));
-      tabContents.forEach(c => c.classList.add("hidden"));
-
-      // Activate clicked tab
-      btn.classList.add("bg-gray-800", "text-gray-50", "rounded-full");
-      document.getElementById(btn.dataset.tab).classList.remove("hidden");
-    });
-  });
-
+function changeAtiveTab(event,tabID){
+    let element = event.target;
+    while(element.nodeName !== "A"){
+      element = element.parentNode;
+    }
+    ulElement = element.parentNode.parentNode;
+    aElements = ulElement.querySelectorAll("li > a");
+    tabContents = document.getElementById("tabs-id").querySelectorAll(".tab-content > div");
+    for(let i = 0 ; i < aElements.length; i++){
+      aElements[i].classList.remove("text-white");
+      aElements[i].classList.remove("bg-gray-700");
+      aElements[i].classList.add("text-gray-700");
+      aElements[i].classList.add("bg-white");
+      tabContents[i].classList.add("hidden");
+      tabContents[i].classList.remove("block");
+    }
+    element.classList.remove("text-gray-700");
+    element.classList.remove("bg-white");
+    element.classList.add("text-white");
+    element.classList.add("bg-gray-700");
+    document.getElementById(tabID).classList.remove("hidden");
+    document.getElementById(tabID).classList.add("block");
+  }
