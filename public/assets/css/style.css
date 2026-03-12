@@ -14,258 +14,258 @@ nav {
   height: 53px;
 }
 
-        /* Custom Scrollbar */
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: rgba(99, 102, 241, 0.5);
-            border-radius: 10px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: rgba(99, 102, 241, 0.7);
-        }
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.5);
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(99, 102, 241, 0.7);
+}
 
-        /* Message Animation */
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        .animate-slide-left {
-            animation: slideInLeft 0.3s ease-out forwards;
-        }
-        .animate-slide-right {
-            animation: slideInRight 0.3s ease-out forwards;
-        }
+/* Message Animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.animate-slide-left {
+    animation: slideInLeft 0.3s ease-out forwards;
+}
+.animate-slide-right {
+    animation: slideInRight 0.3s ease-out forwards;
+}
 
-        /* Typing Animation */
-        @keyframes bounce {
-            0%, 60%, 100% { transform: translateY(0); }
-            30% { transform: translateY(-4px); }
-        }
-        .typing-dot {
-            animation: bounce 1.4s infinite ease-in-out;
-        }
-        .typing-dot:nth-child(1) { animation-delay: 0s; }
-        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
-        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+/* Typing Animation */
+@keyframes bounce {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-4px); }
+}
+.typing-dot {
+    animation: bounce 1.4s infinite ease-in-out;
+}
+.typing-dot:nth-child(1) { animation-delay: 0s; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
 
-        /* Pulse Animation for Online Status */
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        .animate-pulse-slow {
-            animation: pulse 2s infinite;
-        }
+/* Pulse Animation for Online Status */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+.animate-pulse-slow {
+    animation: pulse 2s infinite;
+}
 
-        /* Button 9: Neon Glow */
-        @keyframes neon-glow {
-            0%, 100% { box-shadow: 0 0 10px rgba(85, 85, 247, 0.5), 0 0 20px rgba(168, 85, 247, 0.3); }
-            50% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.8), 0 0 40px rgba(85, 85, 247, 0.5); }
-        }
-        .animate-neon {
-            animation: neon-glow 2s ease-in-out infinite;
-        }
+/* Button 9: Neon Glow */
+@keyframes neon-glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(85, 85, 247, 0.5), 0 0 20px rgba(168, 85, 247, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.8), 0 0 40px rgba(85, 85, 247, 0.5); }
+}
+.animate-neon {
+    animation: neon-glow 2s ease-in-out infinite;
+}
 
-        /* rotet setting code------------------------------------ */
+/* rotet setting code------------------------------------ */
 
-        /* Infinite Rotate Animation for Settings Icon */
-        @keyframes spin-slow {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        .animate-spin-slow {
-            animation: spin-slow 3s linear infinite;
-        }
+/* Infinite Rotate Animation for Settings Icon */
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+}
 
-        /* Notification Badge Pulse */
-        @keyframes notification-pulse {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            50% {
-                transform: scale(1.2);
-                opacity: 0.8;
-            }
-        }
-        .animate-notification-pulse {
-            animation: notification-pulse 2s ease-in-out infinite;
-        }
+/* Notification Badge Pulse */
+@keyframes notification-pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+.animate-notification-pulse {
+    animation: notification-pulse 2s ease-in-out infinite;
+}
 
-        /* Gentle swing animation */
-        @keyframes swing {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(15deg); }
-            75% { transform: rotate(-15deg); }
-        }
-        
-        .animate-swing {
-            animation: swing 1.5s ease-in-out infinite;
-        }
+/* Gentle swing animation */
+@keyframes swing {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    75% { transform: rotate(-15deg); }
+}
 
-        /* Bounce animation */
-        @keyframes bounce-notif {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-3px); }
-        }
-        
-        .animate-bounce-notif {
-            animation: bounce-notif 1s ease-in-out infinite;
-        }
+.animate-swing {
+    animation: swing 1.5s ease-in-out infinite;
+}
 
-        /* contact page css start */
+/* Bounce animation */
+@keyframes bounce-notif {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
 
-        /* Rotating circle animations */
-        @keyframes rotate-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        @keyframes rotate-medium {
-            from { transform: rotate(360deg); }
-            to { transform: rotate(0deg); }
-        }
-        
-        @keyframes rotate-fast {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        .animate-rotate-slow {
-            animation: rotate-slow 20s linear infinite;
-        }
-        
-        .animate-rotate-medium {
-            animation: rotate-medium 15s linear infinite;
-        }
-        
-        .animate-rotate-fast {
-            animation: rotate-fast 10s linear infinite;
-        }
+.animate-bounce-notif {
+    animation: bounce-notif 1s ease-in-out infinite;
+}
 
-        /* Floating animation */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
+/* contact page css start */
 
-        /* Pulse glow */
-        @keyframes pulse-glow {
-            0%, 100% { opacity: 0.5; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.05); }
-        }
-        
-        .animate-pulse-glow {
-            animation: pulse-glow 4s ease-in-out infinite;
-        }
+/* Rotating circle animations */
+@keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
-        /* Input focus animation */
-        @keyframes input-glow {
-            0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
-        }
+@keyframes rotate-medium {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
 
-        .input-animate:focus {
-            animation: input-glow 1s ease-out;
-        }
+@keyframes rotate-fast {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
-        /* Button hover ripple */
-        @keyframes ripple-effect {
-            0% { transform: scale(0); opacity: 1; }
-            100% { transform: scale(4); opacity: 0; }
-        }
-        
-        .ripple-btn {
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .ripple-btn::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
-            transform: scale(0);
-            opacity: 0;
-        }
-        
-        .ripple-btn:active::after {
-            animation: ripple-effect 0.6s ease-out;
-        }
+.animate-rotate-slow {
+    animation: rotate-slow 20s linear infinite;
+}
 
-        /* Form slide in */
-        @keyframes form-slide-in {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        .animate-form-slide {
-            animation: form-slide-in 0.8s ease-out forwards;
-        }
+.animate-rotate-medium {
+    animation: rotate-medium 15s linear infinite;
+}
 
-        /* Staggered content animation */
-        @keyframes content-fade-up {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-content {
-            opacity: 0;
-            animation: content-fade-up 0.6s ease-out forwards;
-        }
-        
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
-        .delay-4 { animation-delay: 0.4s; }
-        .delay-5 { animation-delay: 0.5s; }
+.animate-rotate-fast {
+    animation: rotate-fast 10s linear infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Input focus animation */
+@keyframes input-glow {
+    0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+}
+
+.input-animate:focus {
+    animation: input-glow 1s ease-out;
+}
+
+/* Button hover ripple */
+@keyframes ripple-effect {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(4); opacity: 0; }
+}
+
+.ripple-btn {
+    overflow: hidden;
+    position: relative;
+}
+
+.ripple-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    transform: scale(0);
+    opacity: 0;
+}
+
+.ripple-btn:active::after {
+    animation: ripple-effect 0.6s ease-out;
+}
+
+/* Form slide in */
+@keyframes form-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-form-slide {
+    animation: form-slide-in 0.8s ease-out forwards;
+}
+
+/* Staggered content animation */
+@keyframes content-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-content {
+    opacity: 0;
+    animation: content-fade-up 0.6s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
 
         /* contact form floting shape */
 

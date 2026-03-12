@@ -21,3 +21,4 @@ function changeAtiveTab(event,tabID){
     document.getElementById(tabID).classList.remove("hidden");
     document.getElementById(tabID).classList.add("block");
   }
+

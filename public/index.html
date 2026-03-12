@@ -18,6 +18,8 @@
     <script src="https://unpkg.com/@material-tailwind/html@3.0.0-beta.7/dist/material-tailwind.umd.min.js" defer></script>
     <link rel="stylesheet" href="./assets/js/tab-bar.js" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+    <script src="./assets/js/chats-tab.js"></script>
   </head>
   <body>
     <div class="flex h-screen bg-gray-50 dark:bg-gray-900"
@@ -207,11 +209,11 @@
                   x-transition:leave="transition-all ease-in-out duration-300"
                   x-transition:leave-start="opacity-100 max-h-xl"
                   x-transition:leave-end="opacity-0 max-h-0"
-                  class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
+                  class="p-2 bg-[#41027d]  mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-50 rounded-md shadow-inner dark:text-gray-400 dark:bg-gray-900"
                   aria-label="submenu"
                 >
                   <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-100 dark:hover:text-gray-200"
                   >
                     <a class="w-full" href="pages/login.html">Login</a>
                   </li>
@@ -245,7 +247,7 @@
           </ul>
           </div>
           <div class="px-6 my-6">
-            <button class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-700 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+            <button class="flex items-center justify-between bg-[#41027d] w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
               Create account
               <span class="ml-2" aria-hidden="true">+</span>
             </button>
@@ -265,7 +267,7 @@
         class="fixed inset-0 z-10 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"
       ></div>
       <aside
-        class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden"
+        class="fixed inset-y-0 z-20 flex-shrink-0 w-64 custom-scrollbar mt-[62px] sm:mt-[79px] overflow-y-auto bg-gray-800 dark:bg-gray-800 md:hidden"
         x-show="isSideMenuOpen"
         x-transition:enter="transition ease-in-out duration-150"
         x-transition:enter-start="opacity-0 transform -translate-x-20"
@@ -276,18 +278,18 @@
         @click.away="closeSideMenu"
         @keydown.escape="closeSideMenu"
       >
-        <div class="py-4 text-gray-500 dark:text-gray-400">
-          <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
-            Windmill
+        <div class="py-4 text-white dark:text-gray-400 bg-gray-800">
+          <a class="ml-6 text-lg font-bold text-purple-600 dark:text-gray-200" href="#">
+            TechSaraZ
           </a>
           <ul class="mt-6">
-            <li class="relative px-6 py-3">
+            <li class="relative px-6 py-3 bg-[#41027d]">
               <span
                 class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
                 aria-hidden="true"
               ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                class="text-white inline-flex items-center w-full text-sm font-semibold  transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
                 href="index.html"
               >
                 <svg
@@ -309,7 +311,7 @@
             </li>
           </ul>
           <ul>
-            <li class="relative px-6 py-3">
+            <li class="relative px-6 py-3 ">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="forms.html"
@@ -442,7 +444,7 @@
             </li>
             <li class="relative px-6 py-3">
               <button
-                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-white dark:hover:text-gray-200"
                 @click="togglePagesMenu"
                 aria-haspopup="true"
               >
@@ -531,15 +533,15 @@
         </div>
       </aside>
       <div class="flex flex-col flex-1 w-full">
-        <main class="h-full overflow-y-auto py-6 bg-[#f6f0ff]">
-          <div class="container px-6 mx-auto grid">
+        <main class="h-full overflow-y-auto pt-6 md:pb-6 pb-0  bg-[#f6f0ff]">
+          <div class="md:container md:px-6 mx-auto grid">
             <!-- Tab start -->
             <div class="flex flex-wrap" id="tabs-id">
               <div class="w-full">
-                <div class="flex justify-between gap-5 mb-8">
+                <div class="header flex justify-between gap-5 mb-8">
                   <!-- Mobile hamburger -->
                   <button
-                    class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple"
+                    class="p-1 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple"
                     @click="toggleSideMenu"
                     aria-label="Menu"
                   >
@@ -557,24 +559,24 @@
                     </svg>
                   </button>
 
-                  <ul class="flex list-none flex-wrap flex-row w-m bg-white rounded-full shadow-lg xl:gap-3">
+                  <ul class=" list-none flex-wrap flex-row w-m bg-white rounded-full shadow-lg gap-1 xl:gap-3 cursor-pointer hidden sm:inline-flex">
                     <li class="text-center last:mr-0">
-                      <a class="text-sm font-semibold capitalize px-6 py-3.5 rounded-full block leading-normal text-white bg-purple-950" onclick="changeAtiveTab(event,'tab-profile')">
-                        <i class="fa-regular fa-comment-dots text-base mr-1"></i>chat</a>
+                      <a class="text-sm font-semibold capitalize px-3 sm:px-4 lg:px-6 py-3.5 rounded-full block leading-normal text-white bg-purple-950" onclick="changeAtiveTab(event,'tab-profile')">
+                        <i class="fa-regular fa-comment-dots text-base mr-1 hidden md:inline-flex"></i>chat</a>
                     </li>
                     <li class="text-center last:mr-0">
-                      <a class="text-sm font-semibold capitalize px-6 py-3.5 rounded-full block leading-normal text-gray-700 bg-white" onclick="changeAtiveTab(event,'tab-settings')">
-                        <i class="fa-solid fa-phone text-base mr-1"></i> contact</a></li>
+                      <a class="text-sm font-semibold capitalize px-3 sm:px-4 lg:px-6 py-3.5 rounded-full block leading-normal text-gray-700 bg-white" onclick="changeAtiveTab(event,'tab-settings')">
+                        <i class="fa-solid fa-phone text-base mr-1 hidden md:inline-flex"></i> contact</a></li>
                     
                     <li class=" text-center last:mr-0">
-                      <a class="text-sm font-semibold capitalize px-6 py-3.5 rounded-full block leading-normal text-gray-700 bg-white" onclick="changeAtiveTab(event,'tab-options')">
-                        <i class="fas fa-briefcase text-base mr-1"></i> templetes</a></li>
+                      <a class="text-sm font-semibold capitalize px-3 sm:px-4 lg:px-6 py-3.5 rounded-full block leading-normal text-gray-700 bg-white" onclick="changeAtiveTab(event,'tab-options')">
+                        <i class="fas fa-briefcase text-base mr-1 hidden md:inline-flex"></i> templetes</a></li>
                     <li class=" text-center last:mr-0">
-                    <a class="text-sm font-semibold capitalize px-6 py-3.5 rounded-full block leading-normal text-gray-700 bg-white" onclick="changeAtiveTab(event,'tab-options')">
-                      <i class="fa-solid fa-laptop-code text-base mr-1"></i>my projects</a></li>
+                    <a class="text-sm font-semibold capitalize px-3 sm:px-4 lg:px-6 py-3.5 rounded-full block leading-normal text-gray-700 bg-white" onclick="changeAtiveTab(event,'tab-options')">
+                      <i class="fa-solid fa-laptop-code text-base mr-1 hidden md:inline-flex"></i>my projects</a></li>
                   </ul>
                   <!--  -->
-                  <ul class="flex items-center flex-shrink-0 space-x-4">
+                  <ul class="flex items-center flex-shrink-0 gap-2 lg:gap-4">
                     <!-- Profile menu -->
                     <li class="relative">
                       <button
@@ -753,22 +755,48 @@
                     </div>
                   </ul>
                 </div>
+
+                <!-- MOBILE SHOW NAV -->
+
+                 <ul class="mb-5 mt-[65px] mx-5 sm:mx-0 mobile-nav-ui flex list-none flex-row w-m bg-white rounded-full shadow-lg gap-1 xl:gap-3 cursor-pointer sm:hidden">
+                    <li class="mobile-nav-li text-center last:mr-0 w-1/4">
+                      <a class="text-sm font-semibold capitalize py-3.5 rounded-full block leading-normal text-white bg-purple-950" onclick="changeAtiveTab(event,'tab-profile')">
+                        <i class="fa-regular fa-comment-dots text-base mr-1 hidden md:inline-flex"></i>chat</a>
+                    </li>
+                    <li class="mobile-nav-li text-center last:mr-0 w-1/4">
+                      <a class="text-sm font-semibold capitalize py-3.5 rounded-full block leading-normal text-gray-700 bg-white" onclick="changeAtiveTab(event,'tab-settings')">
+                        <i class="fa-solid fa-phone text-base mr-1 hidden md:inline-flex"></i> contact</a></li>
+                    
+                    <li class="mobile-nav-li text-center last:mr-0 w-1/4">
+                      <a class="text-sm font-semibold capitalize py-3.5 rounded-full block leading-normal text-gray-700 bg-white" onclick="changeAtiveTab(event,'tab-options')">
+                        <i class="fas fa-briefcase text-base mr-1 hidden md:inline-flex"></i> templetes</a></li>
+                    <li class="mobile-nav-li text-center last:mr-0 w-1/4">
+                    <a class="text-sm font-semibold capitalize py-3.5 rounded-full block leading-normal text-gray-700 bg-white" onclick="changeAtiveTab(event,'tab-options')">
+                      <i class="fa-solid fa-laptop-code text-base mr-1 hidden md:inline-flex"></i>my projects</a></li>
+                  </ul>
                 
-                <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-3xl">
+                <div class="relative flex flex-col min-w-0 break-words bg-white w-full shadow-lg rounded-3xl sm:mt-[85px] md:mt-0">
                   <div class="flex-auto">
                     <div class="tab-content tab-space">
                       <div class="block" id="tab-profile">
                         <!-- DASHBORD START -->
-                        <div class="bg-gray-950 h-[80vh] flex items-center justify-center rounded-3xl">
+                        <div class="bg-gray-950 flex items-center justify-center md:rounded-3xl">
 
                           <!-- MAIN CHATBOARD CONTAINER -->
-                          <div class="w-full max-w-7xl h-[80vh] bg-gray-900/80 backdrop-blur-xl rounded-2xl md:rounded-3xl border border-white/10 shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                          <div class="chat-container w-full max-w-7xl h-screen md:h-[83vh] bg-gray-900/80 backdrop-blur-xl md:rounded-2xl md:rounded-3xl border border-white/10 shadow-2xl overflow-hidden flex flex-col md:flex-row">
 
                               <!-- ==================== LEFT SIDEBAR ==================== -->
-                              <div class="hidden md:flex md:w-[280px] lg:w-1/4 bg-gray-800/50 border-r border-white/10 flex-col">
+                               <div id="sidebarOverlay"
+class="fixed inset-0 bg-black/50 hidden z-40 md:hidden"
+onclick="toggleSidebar()"></div>
+                              <div id="chatSidebar"
+class="fixed custom-scrollbar md:relative top-0 left-0 h-full w-[100%] lg:w-1/4 
+bg-gray-800 border-r border-white/10 flex-col 
+transform -translate-x-full md:translate-x-0 
+transition-transform duration-300 z-50 md:flex">
                                   
                                   <!-- Left Header with Search -->
-                                  <div class="p-4 border-b border-white/10">
+                                  <div class="p-4 border-b border-white/10 absolute md:relative z-40 w-full top-0 left-0">
                                       <div class="flex items-center justify-between mb-4">
                                           <h1 class="text-xl font-bold text-white">Chats</h1>
                                           <button class="w-9 h-9 rounded-full bg-indigo-500/20 text-indigo-400 hover:bg-indigo-500/30 transition-colors flex items-center justify-center">
@@ -788,11 +816,12 @@
                                   </div>
 
                                   <!-- Chat Contacts List -->
-                                  <div class="flex-1 overflow-y-auto custom-scrollbar p-2 space-y-1">
+                                  <div class="h-[-webkit-fill-available] md:h-auto flex-1 overflow-y-auto custom-scrollbar p-2 space-y-1 mt-[130px] md:mt-0">
                                       
                                       <!-- Active Contact -->
                                       <div class="p-3 rounded-xl bg-indigo-500/20 border border-indigo-500/30 cursor-pointer transition-all hover:bg-indigo-500/15">
                                           <div class="flex items-center gap-2 sm:gap-3">
+
                                               <div class="relative">
                                                   <img src="https://i.pravatar.cc/150?img=47" alt="Sarah" class="w-12 h-12 rounded-full object-cover ring-2 ring-indigo-500">
                                                   <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-400 rounded-full border-2 border-gray-800"></span>
@@ -916,12 +945,18 @@
                               </div>
 
                               <!-- ==================== MIDDLE CHAT CONTAINER ==================== -->
-                              <div class="flex-1 flex flex-col bg-gray-900/30 w-full">
+                              <div class=" flex-1 flex flex-col bg-gray-900/30 w-full relative middle-chat">
                                   
                                   <!-- Chat Header -->
-                                  <div class="p-4 border-b border-white/10 bg-gray-800/30">
+                                  <div class="fixed-header p-4 border-b border-white/10 bg-gray-800 md:bg-gray-800/30">
                                       <div class="flex items-center justify-between">
                                           <div class="flex items-center gap-2 sm:gap-3">
+                                            <button onclick="toggleSidebar()" class="md:hidden mr-2 text-gray-300 hover:text-white">
+    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+</button>
                                               <div class="relative">
                                                   <img src="https://i.pravatar.cc/150?img=47" alt="Sarah" class="w-10 h-10 rounded-full object-cover">
                                                   <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-400 rounded-full border-2 border-gray-900"></span>
@@ -955,7 +990,7 @@
                                   </div>
 
                                   <!-- Messages Area -->
-                                  <div class="flex-1 overflow-y-auto custom-scrollbar p-4 space-y-4">
+                                  <div class=" flex-1 overflow-y-auto custom-scrollbar p-4 space-y-4 pt-[85px] md:pt-4 pb-[80px] md:pb-4">
                                       
                                       <!-- Date Separator -->
                                       <div class="flex items-center justify-center">
@@ -1042,8 +1077,10 @@
                                   </div>
 
                                   <!-- Message Input Area -->
-                                  <div class="p-4 bg-gray-800/30 border-t border-white/10">
-                                      <form class="flex items-center space-x-3">
+                                  <div class="p-3 md:p-4 bg-gray-800/90 border-t border-white/10 
+fixed bottom-0 left-0 right-0 md:relative md:bottom-auto backdrop-blur-xl">
+                                      <form class="flex items-center gap-3 justify-between sm:justify-normal">
+                                        <div class="flex gap-2">
                                           <button type="button" class="text-gray-400 hover:text-white transition-colors">
                                               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path>
@@ -1054,7 +1091,8 @@
                                                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                               </svg>
                                           </button>
-                                          <input type="text" placeholder="Type a message..." class="flex-1 bg-gray-700/50 text-white rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50 placeholder-gray-400 transition-all">
+                                          </div>
+                                          <input type="text" placeholder="Type a message..." class="chat-input-on flex-1 bg-gray-700/50 text-white rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50 placeholder-gray-400 transition-all">
                                           <button type="submit" class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-2xl p-3 hover:scale-105 transition-transform shadow-lg hover:shadow-indigo-500/25">
                                               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
@@ -1213,7 +1251,7 @@
                               <div class="absolute top-20 -left-32 w-96 h-96 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-rotate-slow"></div>
                               
                               <!-- Medium rotating circle -->
-                              <div class="absolute bottom-20 -right-32 w-80 h-80 bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-full blur-3xl animate-rotate-medium"></div>
+                              <div class="absolute bottom-20 -right-32 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-green-500/20 rounded-full blur-3xl animate-rotate-medium"></div>
                               
                               <!-- Small floating circle -->
                               <div class="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-float"></div>
@@ -1401,7 +1439,7 @@
                                           </div>
 
                                           <!-- Submit Button -->
-                                          <button type="submit" class="w-full ripple-btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold py-4 rounded-xl hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-indigo-500/25 flex items-center justify-center gap-2 group">
+                                          <button type="submit" class="w-full ripple-btn bg-gradient-to-r from-indigo-500 via-purple500 to-purple-900 text-white font-semibold py-4 rounded-xl hover:from-indigo-600 hover:via-purple-600 hover:to-purple-800 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-indigo-500/25 flex items-center justify-center gap-2 group">
                                               <span>Send Message</span>
                                               <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -1466,5 +1504,7 @@
         </main>
       </div>
     </div>
+
+
   </body>
 </html>
